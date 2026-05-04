@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Privacy - Location Always and When In Use Usage Description
+Privacy - Location Always and When In Use Usage Description
+Privacy - Location Always and When In Use Usage Description
+Privacy - Location Always and When In Use Usage Description</key>
+	<string>Recap tracks your location in the background during an active session.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Caveat-SemiBold.ttf</string>
+		<string>Caveat-Regular.ttf</string>
+		<string>Caveat-Bold.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+</dict>
+</plist>

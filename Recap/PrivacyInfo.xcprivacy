@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!--
+        Recapp does NOT use any data for advertising or third-party tracking.
+    -->
+    <key>NSPrivacyTracking</key>
+    <false/>
+
+    <key>NSPrivacyTrackingDomains</key>
+    <array/>
+
+    <!--
+        Data collected and transmitted off-device:
+
+        Precise Location — GPS route coordinates and stop coordinates are included
+        in NightData synced to Supabase (saved alongside the user's account ID).
+        Used solely to build the user's own activity history within the app.
+        Not used for advertising, profiling, or sharing with third parties.
+
+        Photos are stored ONLY on-device (local file:// URIs); they are never
+        uploaded and therefore not declared here.
+    -->
+    <key>NSPrivacyCollectedDataTypes</key>
+    <array>
+        <dict>
+            <key>NSPrivacyCollectedDataType</key>
+            <string>NSPrivacyCollectedDataTypePreciseLocation</string>
+            <!-- Linked to user account in Supabase -->
+            <key>NSPrivacyCollectedDataTypeLinked</key>
+            <true/>
+            <key>NSPrivacyCollectedDataTypeTracking</key>
+            <false/>
+            <key>NSPrivacyCollectedDataTypePurposes</key>
+            <array>
+                <!-- Route and stop data powers the recap timeline feature -->
+                <string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+            </array>
+        </dict>
+    </array>
+
+    <!--
+        Required-reason APIs used by this app:
+
+        UserDefaults — used to persist the user's own app settings, profile,
+        and session state on their own device. No data is shared between apps.
+        Reason CA92.1: access info from the same app, not from other apps.
+    -->
+    <key>NSPrivacyAccessedAPITypes</key>
+    <array>
+        <dict>
+            <key>NSPrivacyAccessedAPIType</key>
+            <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+            <key>NSPrivacyAccessedAPITypeReasons</key>
+            <array>
+                <string>CA92.1</string>
+            </array>
+        </dict>
+    </array>
+
+</dict>
+</plist>
